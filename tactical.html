@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Primer Tactical Training — Premium mobile concealed carry instruction. ISP-certified CCL courses. We come to you with everything. You show up. We handle the rest.">
+<meta name="keywords" content="Illinois CCL, concealed carry, firearms training, mobile instruction, ISP certified, NRA instructor, veteran owned, SDVOSB">
+<title>Primer Tactical Training | Illinois CCL Certification | Primer Performance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --slate: #3B5068;
+  --bronze: #A0845C;
+  --graphite: #4A4A4A;
+  --navy: #2C3E50;
+  --field: #F2F5F7;
+  --dark: #1C2938;
+  --white: #FFFFFF;
+  --bronze-light: rgba(160, 132, 92, 0.12);
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Barlow', sans-serif;
+  color: var(--graphite);
+  line-height: 1.6;
+  background: var(--white);
+  -webkit-font-smoothing: antialiased;
+}
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 80px 0; }
+.section-dark { background: var(--dark); color: var(--field); }
+.section-field { background: var(--field); }
+
+/* ─── NAV BAR ─────────────────────────────── */
+.nav {
+  background: var(--dark);
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(160,132,92,0.2);
+}
+.nav-inner {
+  display: flex; justify-content: space-between; align-items: center;
+}
+.nav-brand {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 20px; font-weight: 700;
+  color: var(--white);
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+.nav-brand span { color: var(--bronze); }
+.nav-back {
+  font-size: 13px; color: var(--bronze);
+  text-decoration: none; font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+.nav-back:hover { color: #B8975E; }
+
+/* ─── HERO ────────────────────────────────── */
+.tac-hero {
+  background: var(--dark);
+  padding: 80px 0 60px;
+  position: relative;
+  overflow: hidden;
+}
+.tac-hero::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--bronze) 0%, var(--slate) 100%);
+}
+.tac-hero::after {
+  content: '';
+  position: absolute;
+  bottom: -150px; right: -150px;
+  width: 400px; height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(160,132,92,0.06) 0%, transparent 70%);
+}
+.tac-hero-content { position: relative; z-index: 2; }
+.tac-badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border: 1px solid rgba(160,132,92,0.4);
+  border-radius: 2px;
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--bronze);
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+.tac-hero h1 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(40px, 7vw, 72px);
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.0;
+  letter-spacing: -1px;
+  margin-bottom: 12px;
+}
+.tac-hero h1 span { color: var(--bronze); }
+.tac-hero-sub {
+  font-size: 20px;
+  color: var(--bronze);
+  font-style: italic;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+.tac-hero-text {
+  font-size: 17px;
+  color: #8899AA;
+  max-width: 640px;
+  line-height: 1.7;
+  margin-bottom: 32px;
+}
+.tac-creds {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  margin-bottom: 36px;
+}
+.tac-cred {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px;
+  background: rgba(59,80,104,0.3);
+  border-radius: 2px;
+  font-size: 12px;
+  color: #AABBCC;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+.tac-cred svg { width: 14px; height: 14px; fill: var(--bronze); }
+
+/* ─── PROMISE BAR ─────────────────────────── */
+.promise-bar {
+  background: var(--navy);
+  padding: 28px 0;
+  text-align: center;
+}
+.promise-bar p {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 1px;
+}
+.promise-bar p span { color: var(--bronze); }
+
+/* ─── WHAT WE PROVIDE ─────────────────────── */
+.provide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+.provide-item {
+  padding: 28px 24px;
+  background: var(--white);
+  border-left: 3px solid var(--bronze);
+  box-shadow: var(--shadow);
+}
+.provide-item h4 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 18px; font-weight: 700;
+  color: var(--slate);
+  margin-bottom: 8px;
+}
+.provide-item p {
+  font-size: 14px; color: #6B7B8D; line-height: 1.6;
+}
+
+/* ─── PRICING TABLE ───────────────────────── */
+.pricing-section { padding: 80px 0; }
+.section-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--bronze);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.section-title {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(32px, 5vw, 48px);
+  font-weight: 700;
+  color: var(--slate);
+  line-height: 1.1;
+  margin-bottom: 12px;
+}
+.section-dark .section-title { color: var(--white); }
+.section-subtitle {
+  font-size: 17px;
+  color: #6B7B8D;
+  margin-bottom: 48px;
+  max-width: 640px;
+}
+
+.pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 24px;
+}
+.pricing-table thead th {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--white);
+  background: var(--slate);
+  padding: 14px 20px;
+  text-align: left;
+}
+.pricing-table thead th:not(:first-child) { text-align: center; }
+.pricing-table tbody td {
+  padding: 16px 20px;
+  font-size: 15px;
+  border-bottom: 1px solid #E8ECF0;
+}
+.pricing-table tbody td:not(:first-child) {
+  text-align: center;
+  font-weight: 600;
+  color: var(--slate);
+}
+.pricing-table tbody td:first-child {
+  font-weight: 600;
+  color: var(--graphite);
+}
+.pricing-table tbody tr:hover { background: var(--field); }
+.pricing-note {
+  font-size: 14px; color: #6B7B8D;
+  font-style: italic;
+  margin-bottom: 24px;
+}
+.discount-badges {
+  display: flex; gap: 16px; flex-wrap: wrap;
+  margin-top: 20px;
+}
+.discount-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 18px;
+  background: var(--bronze-light);
+  border-left: 3px solid var(--bronze);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--slate);
+}
+
+/* ─── PROCESS ─────────────────────────────── */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  counter-reset: step;
+}
+.process-step {
+  padding: 24px 20px;
+  background: rgba(59,80,104,0.35);
+  border-top: 3px solid var(--bronze);
+  counter-increment: step;
+  position: relative;
+}
+.process-step::before {
+  content: counter(step);
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  color: var(--bronze);
+  line-height: 1;
+  margin-bottom: 8px;
+  display: block;
+}
+.process-step p {
+  font-size: 14px; color: var(--white);
+  font-weight: 500; line-height: 1.5;
+}
+
+/* ─── COMMITMENT & FOID ──────────────────── */
+.twin-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+}
+.twin-card {
+  padding: 36px 28px;
+  background: var(--white);
+  border-top: 3px solid var(--bronze);
+  box-shadow: var(--shadow);
+}
+.twin-card h3 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: 24px; font-weight: 700;
+  color: var(--slate);
+  margin-bottom: 12px;
+}
+.twin-card p {
+  font-size: 15px; color: #6B7B8D; line-height: 1.7;
+}
+.twin-card .emphasis {
+  font-style: italic;
+  color: var(--bronze);
+  font-weight: 600;
+  margin-top: 12px;
+}
+
+/* ─── CTA ─────────────────────────────────── */
+.cta-section {
+  background: var(--dark);
+  padding: 80px 0;
+  text-align: center;
+}
+.cta-section h2 {
+  font-family: 'Barlow Condensed', sans-serif;
+  font-size: clamp(32px, 5vw, 48px);
+  color: var(--white);
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.cta-section p {
+  font-size: 17px; color: #8899AA;
+  max-width: 560px; margin: 0 auto 36px;
+}
+.cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.btn-primary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 36px;
+  background: var(--bronze);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600; font-size: 14px;
+  letter-spacing: 1px; text-transform: uppercase;
+  transition: all 0.3s;
+}
+.btn-primary:hover { background: #B8975E; transform: translateY(-2px); }
+.btn-secondary {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 16px 36px;
+  background: transparent;
+  border: 1px solid rgba(160,132,92,0.5);
+  color: var(--bronze);
+  text-decoration: none;
+  font-weight: 600; font-size: 14px;
+  letter-spacing: 1px; text-transform: uppercase;
+  transition: all 0.3s;
+}
+.btn-secondary:hover { border-color: var(--bronze); background: rgba(160,132,92,0.1); }
+
+/* ─── FOOTER ──────────────────────────────── */
+footer {
+  background: #0F1923;
+  padding: 48px 0 24px;
+  text-align: center;
+}
+.footer-entity {
+  font-size: 12px; color: #556677;
+  margin-bottom: 4px;
+}
+.footer-copy {
+  font-size: 11px; color: #3A4A5A;
+}
+.footer-contact { margin-bottom: 24px; }
+.footer-contact a {
+  color: var(--bronze);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+.footer-contact a:hover { text-decoration: underline; }
+.footer-links {
+  display: flex; justify-content: center; gap: 24px;
+  margin-bottom: 24px;
+}
+.footer-links a {
+  font-size: 12px; color: #667788;
+  text-decoration: none;
+  letter-spacing: 1px; text-transform: uppercase;
+}
+.footer-links a:hover { color: var(--bronze); }
+
+/* ─── RESPONSIVE ──────────────────────────── */
+@media (max-width: 768px) {
+  .twin-grid { grid-template-columns: 1fr; }
+  .tac-hero { padding: 60px 0 40px; }
+  .section { padding: 56px 0; }
+  .pricing-table { font-size: 13px; }
+  .pricing-table thead th, .pricing-table tbody td { padding: 10px 12px; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .process-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .process-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── ANIMATIONS ──────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.tac-badge { animation: fadeUp 0.6s ease both 0.2s; }
+.tac-hero h1 { animation: fadeUp 0.6s ease both 0.4s; }
+.tac-hero-sub { animation: fadeUp 0.6s ease both 0.6s; }
+.tac-hero-text { animation: fadeUp 0.6s ease both 0.8s; }
+.tac-creds { animation: fadeUp 0.6s ease both 1.0s; }
+</style>
+</head>
+<body>
+
+<!-- ═══ NAV ═══ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand">PRIMER <span>PERFORMANCE</span></a>
+    <a href="index.html#services" class="nav-back">← All Services</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="tac-hero">
+  <div class="container tac-hero-content">
+    <div class="tac-badge">Primer Tactical Training</div>
+    <h1>PRIVATE MOBILE<br><span>CCL TRAINING</span></h1>
+    <p class="tac-hero-sub">Illinois Concealed Carry Certification</p>
+    <p class="tac-hero-text">Premium mobile firearms instruction delivered at your location. We bring the firearm, ammunition, eye and ear protection, custom curriculum, and ISP certification. You show up. We handle everything else.</p>
+    <div class="tac-creds">
+      <span class="tac-cred"><svg viewBox="0 0 16 16"><path d="M8 0L10 5.5H16L11 9L13 15L8 11.5L3 15L5 9L0 5.5H6Z"/></svg>ISP Certified Instructor (CCT20H899)</span>
+      <span class="tac-cred"><svg viewBox="0 0 16 16"><path d="M8 0L10 5.5H16L11 9L13 15L8 11.5L3 15L5 9L0 5.5H6Z"/></svg>NRA Instructor #183270750 — 5 Disciplines</span>
+      <span class="tac-cred"><svg viewBox="0 0 16 16"><path d="M8 0L10 5.5H16L11 9L13 15L8 11.5L3 15L5 9L0 5.5H6Z"/></svg>Air Force Security Forces Veteran</span>
+      <span class="tac-cred"><svg viewBox="0 0 16 16"><path d="M8 0L10 5.5H16L11 9L13 15L8 11.5L3 15L5 9L0 5.5H6Z"/></svg>SDVOSB Certified</span>
+    </div>
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:36px;">
+      <span style="padding:6px 14px; background:rgba(160,132,92,0.12); border-radius:2px; font-size:12px; color:var(--bronze); font-weight:500; letter-spacing:0.3px;">Certified Pistol</span>
+      <span style="padding:6px 14px; background:rgba(160,132,92,0.12); border-radius:2px; font-size:12px; color:var(--bronze); font-weight:500; letter-spacing:0.3px;">Certified Rifle</span>
+      <span style="padding:6px 14px; background:rgba(160,132,92,0.12); border-radius:2px; font-size:12px; color:var(--bronze); font-weight:500; letter-spacing:0.3px;">Certified Shotgun</span>
+      <span style="padding:6px 14px; background:rgba(160,132,92,0.12); border-radius:2px; font-size:12px; color:var(--bronze); font-weight:500; letter-spacing:0.3px;">Personal Protection In The Home</span>
+      <span style="padding:6px 14px; background:rgba(160,132,92,0.12); border-radius:2px; font-size:12px; color:var(--bronze); font-weight:500; letter-spacing:0.3px;">Personal Protection Outside The Home</span>
+    </div>
+    <a href="#contact" class="btn-primary">Schedule Your Training →</a>
+  </div>
+</section>
+
+<!-- ═══ PROMISE BAR ═══ -->
+<div class="promise-bar">
+  <div class="container">
+    <p>You show up. <span>We handle everything else.</span></p>
+  </div>
+</div>
+
+<!-- ═══ WHAT WE PROVIDE ═══ -->
+<section class="section section-field">
+  <div class="container">
+    <p class="section-label">What We Provide</p>
+    <h2 class="section-title">Everything Included. No Surprises.</h2>
+    <p class="section-subtitle">Every course includes equipment, ammunition, targets, range time, and ISP certification. No hidden fees. No additional costs.</p>
+    <div class="provide-grid">
+      <div class="provide-item">
+        <h4>Pre-Class Needs Assessment</h4>
+        <p>We evaluate your experience, comfort level, and goals before training day so your instruction is calibrated to where you are.</p>
+      </div>
+      <div class="provide-item">
+        <h4>Mobile Delivery</h4>
+        <p>We come to your location — no travel required. Training delivered at a range convenient to you.</p>
+      </div>
+      <div class="provide-item">
+        <h4>All Equipment Included</h4>
+        <p>Eye and ear protection, firearm, ammunition, and targets. You bring nothing but yourself and valid identification.</p>
+      </div>
+      <div class="provide-item">
+        <h4>Custom Curriculum</h4>
+        <p>ISP-approved content tailored from novice through experienced. Your class is built for where you are, not a one-size-fits-all script.</p>
+      </div>
+      <div class="provide-item">
+        <h4>Experience-Matched Instruction</h4>
+        <p>First-time shooter or seasoned carrier — your instruction intensity, pacing, and depth are matched to your skill level.</p>
+      </div>
+      <div class="provide-item">
+        <h4>Post-Class Follow-Up</h4>
+        <p>Certificate delivered electronically within 24 hours. 30-day check-in to ensure you're confident and prepared.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<section class="pricing-section">
+  <div class="container">
+    <p class="section-label">Course Options & Pricing</p>
+    <h2 class="section-title">Three Paths to Certification</h2>
+    <p class="section-subtitle">All prices include equipment, ammunition, targets, and range time. No hidden fees.</p>
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Solo</th>
+          <th>2–5 Students</th>
+          <th>6+ Students</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>16-Hour Full CCL</td>
+          <td>$749</td>
+          <td>$599/ea</td>
+          <td>$499/ea</td>
+        </tr>
+        <tr>
+          <td>8-Hour CCL (Prior Training Credit)</td>
+          <td>$449</td>
+          <td>$399/ea</td>
+          <td>$349/ea</td>
+        </tr>
+        <tr>
+          <td>3-Hour CCL Renewal</td>
+          <td>$199</td>
+          <td>$149/ea</td>
+          <td>$129/ea</td>
+        </tr>
+        <tr>
+          <td>1:1 Range Development</td>
+          <td>$125/hr</td>
+          <td>—</td>
+          <td>—</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="discount-badges">
+      <div class="discount-badge">15–20% Veteran / Active-Duty Military Discount</div>
+      <div class="discount-badge">15–20% Registered 501(c)(3) Nonprofit Discount</div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PROCESS ═══ -->
+<section class="section section-dark">
+  <div class="container">
+    <p class="section-label">How It Works</p>
+    <h2 class="section-title" style="color:var(--white);">Six Steps to Certified</h2>
+    <p class="section-subtitle" style="color:#8899AA; margin-bottom:48px;">From first contact to ISP application — we manage the entire process.</p>
+    <div class="process-grid">
+      <div class="process-step">
+        <p>Complete the online pre-class needs assessment</p>
+      </div>
+      <div class="process-step">
+        <p>We confirm your date, location, and course selection</p>
+      </div>
+      <div class="process-step">
+        <p>Show up — we bring everything</p>
+      </div>
+      <div class="process-step">
+        <p>Complete training and qualify on the range</p>
+      </div>
+      <div class="process-step">
+        <p>Receive your certificate electronically within 24 hours</p>
+      </div>
+      <div class="process-step">
+        <p>Apply at ispfsb.com with your CCT ID and Instructor ID</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMMITMENT & FOID ═══ -->
+<section class="section section-field">
+  <div class="container">
+    <div class="twin-grid">
+      <div class="twin-card">
+        <h3>Our Commitment</h3>
+        <p>If you do not meet the qualification standard on your first attempt, we schedule a complimentary 1:1 range session and reattempt at no additional cost.</p>
+        <p class="emphasis">Your success is the service.</p>
+      </div>
+      <div class="twin-card">
+        <h3>No FOID? No Problem.</h3>
+        <p>A FOID card is not required to take this class. Complete your training first, and we will assist you with the FOID application process after certification.</p>
+        <p class="emphasis">Train first. Apply after.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <h2>Ready to Get Certified?</h2>
+    <p>Schedule your private mobile CCL training. We come to you with everything you need — firearm, ammunition, protection, curriculum, and certification.</p>
+    <div class="cta-buttons">
+      <a href="mailto:info@primerperform.com" class="btn-primary">Email to Schedule →</a>
+      <a href="tel:3128602360" class="btn-secondary">Call (312) 860-2360</a>
+    </div>
+    <p style="font-size:13px; color:#556677; margin-top:24px;">Scheduling & Student Inquiries: (312) 860-2360 &nbsp;|&nbsp; General: (312) 404-5085</p>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="container">
+    <div class="footer-contact">
+      <a href="mailto:info@primerperform.com">info@primerperform.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#services">All Services</a>
+      <a href="index.html#methodology">Methodology</a>
+      <a href="index.html#about">About</a>
+    </div>
+    <p class="footer-entity">Primer Training and Consulting LLC | Service-Dis

@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Building Blocks Workshops — 15-module leadership development catalog. Half-day and full-day workshops delivered on-site. Lensatic Leadership™ methodology. Veteran-owned SDVOSB.">
+<meta name="keywords" content="leadership workshops, corporate training, conflict resolution, emotional intelligence, team building, veteran owned, SDVOSB, on-site training">
+<title>Building Blocks Workshops | Primer Performance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700;800&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --slate: #3B5068;
+  --bronze: #A0845C;
+  --graphite: #4A4A4A;
+  --navy: #2C3E50;
+  --field: #F2F5F7;
+  --dark: #1C2938;
+  --white: #FFFFFF;
+  --bronze-light: rgba(160, 132, 92, 0.12);
+  --shadow: 0 4px 24px rgba(0,0,0,0.08);
+  --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Barlow', sans-serif; color: var(--graphite); line-height: 1.6; background: var(--white); -webkit-font-smoothing: antialiased; }
+.container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+.section { padding: 80px 0; }
+.section-dark { background: var(--dark); color: var(--field); }
+.section-field { background: var(--field); }
+
+.nav { background: var(--dark); padding: 16px 0; border-bottom: 1px solid rgba(160,132,92,0.2); }
+.nav-inner { display: flex; justify-content: space-between; align-items: center; }
+.nav-brand { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; color: var(--white); text-decoration: none; letter-spacing: 1px; }
+.nav-brand span { color: var(--bronze); }
+.nav-back { font-size: 13px; color: var(--bronze); text-decoration: none; font-weight: 500; letter-spacing: 0.5px; transition: color 0.3s; }
+.nav-back:hover { color: #B8975E; }
+
+.page-hero { background: var(--dark); padding: 80px 0 60px; position: relative; overflow: hidden; }
+.page-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: linear-gradient(90deg, var(--bronze) 0%, var(--slate) 100%); }
+.page-hero::after { content: ''; position: absolute; bottom: -150px; right: -150px; width: 400px; height: 400px; border-radius: 50%; background: radial-gradient(circle, rgba(160,132,92,0.06) 0%, transparent 70%); }
+.hero-content { position: relative; z-index: 2; }
+.hero-badge { display: inline-block; padding: 6px 16px; border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--bronze); margin-bottom: 24px; font-weight: 600; }
+.page-hero h1 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(40px, 7vw, 72px); font-weight: 700; color: var(--white); line-height: 1.0; letter-spacing: -1px; margin-bottom: 12px; }
+.page-hero h1 span { color: var(--bronze); }
+.hero-sub { font-size: 20px; color: var(--bronze); font-style: italic; margin-bottom: 20px; font-weight: 400; }
+.hero-text { font-size: 17px; color: #8899AA; max-width: 640px; line-height: 1.7; margin-bottom: 32px; }
+.hero-creds { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 36px; }
+.hero-cred { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; background: rgba(59,80,104,0.3); border-radius: 2px; font-size: 12px; color: #AABBCC; font-weight: 500; letter-spacing: 0.5px; }
+.hero-cred svg { width: 14px; height: 14px; fill: var(--bronze); }
+
+.section-label { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: var(--bronze); font-weight: 600; margin-bottom: 12px; }
+.section-title { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(32px, 5vw, 48px); font-weight: 700; color: var(--slate); line-height: 1.1; margin-bottom: 12px; }
+.section-dark .section-title { color: var(--white); }
+.section-subtitle { font-size: 17px; color: #6B7B8D; margin-bottom: 48px; max-width: 640px; }
+
+/* ─── MODULE CATALOG ──────────────────────── */
+.cat-label { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; color: var(--slate); margin-bottom: 16px; margin-top: 36px; padding-left: 16px; border-left: 3px solid var(--bronze); }
+.cat-label:first-of-type { margin-top: 0; }
+.module-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 16px; margin-bottom: 12px; }
+.module-card { padding: 20px 20px; background: var(--white); border-left: 3px solid var(--bronze); box-shadow: var(--shadow); }
+.module-card h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700; color: var(--slate); margin-bottom: 6px; }
+.module-card p { font-size: 13px; color: #6B7B8D; line-height: 1.5; }
+
+/* ─── PRICING TABLE ───────────────────────── */
+.pricing-table { width: 100%; border-collapse: collapse; margin-bottom: 24px; }
+.pricing-table thead th { font-family: 'Barlow Condensed', sans-serif; font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--white); background: var(--slate); padding: 14px 20px; text-align: left; }
+.pricing-table tbody td { padding: 16px 20px; font-size: 15px; border-bottom: 1px solid #E8ECF0; }
+.pricing-table tbody td:first-child { font-weight: 600; color: var(--graphite); }
+.pricing-table tbody td:nth-child(n+2) { font-weight: 600; color: var(--slate); }
+.pricing-table tbody tr:hover { background: var(--field); }
+
+/* ─── CHALLENGE CARDS ─────────────────────── */
+.challenge-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+.challenge-card { padding: 28px 24px; background: rgba(59,80,104,0.35); border-top: 3px solid var(--bronze); }
+.challenge-card .code { font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 700; color: var(--bronze); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 4px; }
+.challenge-card h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 20px; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+.challenge-card .meta { font-size: 13px; color: #8899AA; margin-bottom: 10px; }
+.challenge-card p { font-size: 14px; color: #C8D4E0; line-height: 1.6; }
+
+/* ─── CTA ─────────────────────────────────── */
+.cta-section { background: var(--dark); padding: 80px 0; text-align: center; }
+.cta-section h2 { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(32px, 5vw, 48px); color: var(--white); font-weight: 700; margin-bottom: 16px; }
+.cta-section p { font-size: 17px; color: #8899AA; max-width: 560px; margin: 0 auto 36px; }
+.cta-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; padding: 16px 36px; background: var(--bronze); color: var(--white); text-decoration: none; font-weight: 600; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s; }
+.btn-primary:hover { background: #B8975E; transform: translateY(-2px); }
+.btn-secondary { display: inline-flex; align-items: center; gap: 8px; padding: 16px 36px; background: transparent; border: 1px solid rgba(160,132,92,0.5); color: var(--bronze); text-decoration: none; font-weight: 600; font-size: 14px; letter-spacing: 1px; text-transform: uppercase; transition: all 0.3s; }
+.btn-secondary:hover { border-color: var(--bronze); background: rgba(160,132,92,0.1); }
+
+footer { background: #0F1923; padding: 48px 0 24px; text-align: center; }
+.footer-entity { font-size: 12px; color: #556677; margin-bottom: 4px; }
+.footer-copy { font-size: 11px; color: #3A4A5A; }
+.footer-contact { margin-bottom: 24px; }
+.footer-contact a { color: var(--bronze); text-decoration: none; font-size: 14px; font-weight: 500; }
+.footer-contact a:hover { text-decoration: underline; }
+.footer-links { display: flex; justify-content: center; gap: 24px; margin-bottom: 24px; }
+.footer-links a { font-size: 12px; color: #667788; text-decoration: none; letter-spacing: 1px; text-transform: uppercase; }
+.footer-links a:hover { color: var(--bronze); }
+
+@media (max-width: 768px) {
+  .page-hero { padding: 60px 0 40px; }
+  .section { padding: 56px 0; }
+  .cta-buttons { flex-direction: column; align-items: center; }
+  .module-grid { grid-template-columns: 1fr; }
+  .challenge-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 480px) {
+  .pricing-table { font-size: 13px; }
+  .pricing-table thead th, .pricing-table tbody td { padding: 10px 12px; }
+}
+
+@keyframes fadeUp { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+.hero-badge { animation: fadeUp 0.6s ease both 0.2s; }
+.page-hero h1 { animation: fadeUp 0.6s ease both 0.4s; }
+.hero-sub { animation: fadeUp 0.6s ease both 0.6s; }
+.hero-text { animation: fadeUp 0.6s ease both 0.8s; }
+.hero-creds { animation: fadeUp 0.6s ease both 1.0s; }
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="index.html" class="nav-brand">PRIMER <span>PERFORMANCE</span></a>
+    <a href="index.html#services" class="nav-back">← All Services</a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="page-hero">
+  <div class="container hero-content">
+    <div class="hero-badge">Building Blocks Workshops</div>
+    <h1>15 MODULES.<br><span>ONE STANDARD.</span></h1>
+    <p class="hero-sub">Half-Day & Full-Day | Delivered On-Site</p>
+    <p class="hero-text">Modular leadership workshops covering communication, conflict resolution, emotional intelligence, crisis decision-making, and team dynamics. Delivered at your facility. No tactical component required. Each module is built on proprietary Lensatic Leadership™ methodology and mapped to peer-reviewed evidence.</p>
+    <div class="hero-creds">
+      <span class="hero-cred"><svg viewBox="0 0 16 16"><path d="M8 0L10 5.5H16L11 9L13 15L8 11.5L3 15L5 9L0 5.5H6Z"/></svg>Lensatic Leadership™ Methodology</span>
+      <span class="hero-cred"><svg viewBox="0 0 16 16"><path d="M8 0L10 5.5H16L11 9L13 15L8 11.5L3 15L5 9L0 5.5H6Z"/></svg>335+ Studies Research Foundation</span>
+      <span class="hero-cred"><svg viewBox="0 0 16 16"><path d="M8 0L10 5.5H16L11 9L13 15L8 11.5L3 15L5 9L0 5.5H6Z"/></svg>Kirkpatrick Level 3–4 Evaluation</span>
+    </div>
+    <a href="#contact" class="btn-primary">Request a Workshop →</a>
+  </div>
+</section>
+
+<!-- ═══ MODULE CATALOG ═══ -->
+<section class="section section-field">
+  <div class="container">
+    <p class="section-label">Module Catalog</p>
+    <h2 class="section-title">Five Categories. Fifteen Modules.</h2>
+    <p class="section-subtitle">Each module is standalone or stackable. Custom sequencing available for multi-day engagements.</p>
+
+    <h3 class="cat-label">Leadership Foundations</h3>
+    <div class="module-grid">
+      <div class="module-card">
+        <h4>Adaptive Leadership Under Pressure</h4>
+        <p>Decision-making frameworks for ambiguous, high-stakes environments. OODA loop application with structured After Action Review.</p>
+      </div>
+      <div class="module-card">
+        <h4>Values-Based Leadership</h4>
+        <p>Aligning personal and organizational values with observable leadership behavior. Self-assessment, peer feedback, and commitment protocol.</p>
+      </div>
+      <div class="module-card">
+        <h4>Leader as Coach</h4>
+        <p>Shifting from directive to developmental leadership. Questioning techniques, active listening, and the Hold-Hug-Huddle™ framework.</p>
+      </div>
+    </div>
+
+    <h3 class="cat-label">Communication & Conflict</h3>
+    <div class="module-grid">
+      <div class="module-card">
+        <h4>High-Stakes Communication</h4>
+        <p>Structured communication under pressure. Message discipline, audience analysis, and delivery calibration for difficult conversations.</p>
+      </div>
+      <div class="module-card">
+        <h4>Conflict Resolution & De-Escalation</h4>
+        <p>Interest-based negotiation, emotional regulation, and verbal de-escalation techniques drawn from law enforcement and military doctrine.</p>
+      </div>
+      <div class="module-card">
+        <h4>Feedback as a Leadership Tool</h4>
+        <p>Giving and receiving feedback that produces behavior change. SALUTE™ observation-to-action framework applied to professional development.</p>
+      </div>
+    </div>
+
+    <h3 class="cat-label">Resilience & Stress Management</h3>
+    <div class="module-grid">
+      <div class="module-card">
+        <h4>Sustained Performance Under Pressure</h4>
+        <p>STEADY™ methodology for maintaining cognitive function and decision quality during extended stress. Physiological and psychological anchoring.</p>
+      </div>
+      <div class="module-card">
+        <h4>Recovery & Reset</h4>
+        <p>Post-crisis recovery protocols. Identifying performance degradation signals and implementing structured reset sequences.</p>
+      </div>
+      <div class="module-card">
+        <h4>Emotional Intelligence for Leaders</h4>
+        <p>Self-awareness, self-regulation, social awareness, and relationship management. Applied EQ assessment with behavioral anchoring exercises.</p>
+      </div>
+    </div>
+
+    <h3 class="cat-label">Team Dynamics & Decision-Making</h3>
+    <div class="module-grid">
+      <div class="module-card">
+        <h4>Team Cohesion & Trust Building</h4>
+        <p>GARDEN™ experiential cycle applied to team formation. Structured exercises in vulnerability, interdependence, and collective accountability.</p>
+      </div>
+      <div class="module-card">
+        <h4>Crisis Decision-Making</h4>
+        <p>Rapid assessment, resource allocation, and delegation under time pressure. Scenario-based exercises with real-time consequence feedback.</p>
+      </div>
+      <div class="module-card">
+        <h4>Cross-Functional Collaboration</h4>
+        <p>Breaking silos through structured interdependence. Role rotation, shared accountability models, and inter-team communication protocols.</p>
+      </div>
+    </div>
+
+    <h3 class="cat-label">Applied Leadership (Capstone)</h3>
+    <div class="module-grid">
+      <div class="module-card">
+        <h4>Leadership Integration Capstone</h4>
+        <p>Full-day synthesis exercise integrating all prior modules. Scenario-based assessment with structured debrief and individual development plan.</p>
+      </div>
+      <div class="module-card">
+        <h4>After Action Review Facilitation</h4>
+        <p>Training leaders to conduct effective AARs within their own teams. Facilitation technique, question architecture, and follow-through protocols.</p>
+      </div>
+      <div class="module-card">
+        <h4>30-60-90 Day Transfer Plan</h4>
+        <p>Structured behavior transfer planning with accountability checkpoints. Ensures workshop learning converts to sustained workplace behavior change.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRICING ═══ -->
+<section class="section">
+  <div class="container">
+    <p class="section-label">Workshop Pricing</p>
+    <h2 class="section-title">Flexible Formats. Transparent Investment.</h2>
+    <p class="section-subtitle">All pricing includes facilitation, participant materials, structured debrief, and post-workshop transfer resources.</p>
+    <table class="pricing-table">
+      <thead>
+        <tr>
+          <th>Format</th>
+          <th>Duration</th>
+          <th>Group Size</th>
+          <th>Investment</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Half-Day Workshop</td>
+          <td>4 hours</td>
+          <td>Up to 20</td>
+          <td>$2,500 – $4,000</td>
+        </tr>
+        <tr>
+          <td>Full-Day Workshop</td>
+          <td>8 hours</td>
+          <td>Up to 20</td>
+          <td>$4,000 – $7,500</td>
+        </tr>
+        <tr>
+          <td>Multi-Day Package (3+)</td>
+          <td>Custom</td>
+          <td>Custom</td>
+          <td>Contact for pricing</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ═══ EXPERIENTIAL CHALLENGES ═══ -->
+<section class="section section-dark">
+  <div class="container">
+    <p class="section-label">Experiential Challenges</p>
+    <h2 class="section-title" style="color:var(--white);">Add-On Leadership Challenges</h2>
+    <p class="section-subtitle" style="color:#8899AA;">High-intensity experiential exercises that can be added to any workshop engagement. Each includes facilitation, materials, and structured debrief.</p>
+    <div class="challenge-grid">
+      <div class="challenge-card">
+        <p class="code">L-1</p>
+        <h4>The Command Post</h4>
+        <p class="meta">90 min | 6–12 participants | $2,000 – $3,500</p>
+        <p>Crisis management simulation requiring rapid assessment, delegation, and communication under compressed timelines.</p>
+      </div>
+      <div class="challenge-card">
+        <p class="code">L-2</p>
+        <h4>Leadership Rotation</h4>
+        <p class="meta">3 hrs | 8–16 participants | $3,000 – $5,000</p>
+        <p>Six-phase rotating leader exercise testing adaptive leadership across shifting contexts and team configurations.</p>
+      </div>
+      <div class="challenge-card">
+        <p class="code">L-3</p>
+        <h4>The Stakeholder Gauntlet</h4>
+        <p class="meta">2 hrs | 4–8 participants | $2,500 – $4,000</p>
+        <p>High-stakes conversation simulations requiring influence, negotiation, and message discipline under adversarial conditions.</p>
+      </div>
+      <div class="challenge-card">
+        <p class="code">R-1</p>
+        <h4>The Grind</h4>
+        <p class="meta">4 hrs | 8–16 participants | $3,500 – $6,000</p>
+        <p>Sustained resilience challenge testing decision quality, team cohesion, and individual composure over extended duration.</p>
+      </div>
+      <div class="challenge-card">
+        <p class="code">R-2</p>
+        <h4>The Reset</h4>
+        <p class="meta">2 hrs | 6–12 participants | $2,000 – $3,500</p>
+        <p>Stress recovery and performance restoration exercise. Structured decompression followed by re-engagement under load.</p>
+      </div>
+      <div class="challenge-card">
+        <p class="code">R-3</p>
+        <h4>The Comeback</h4>
+        <p class="meta">3 hrs | 8–16 participants | $3,000 – $5,000</p>
+        <p>Engineered failure and reframing exercise. Designed to test recovery mindset and team recalibration after setback.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <h2>Ready to Develop Your Team?</h2>
+    <p>Tell us about your team, your objectives, and your timeline. We will recommend the right modules and format for your organization.</p>
+    <div class="cta-buttons">
+      <a href="mailto:info@primerperform.com" class="btn-primary">Request a Workshop →</a>
+      <a href="tel:3124045085" class="btn-secondary">Call (312) 404-5085</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-contact">
+      <a href="mailto:info@primerperform.com">info@primerperform.com</a>
+    </div>
+    <div class="footer-links">
+      <a href="index.html#services">All Services</a>
+      <a href="index.html#methodology">Methodology</a>
+      <a href="index.html#about">About</a>
+    </div>
+    <p class="footer-entity">Primer Training and Consulting LLC | Service-Disabled Veteran-Owned Small Business</p>
+    <p class="footer-copy">Integration Over Isolation™ | &copy; 2026 Antonio Devan Mannings. All rights reserved.</p>
+  </div>
+</footer>
+
+</body>
+</html>

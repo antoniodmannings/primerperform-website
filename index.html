@@ -271,6 +271,40 @@ body {
   border-radius: 50%;
   flex-shrink: 0;
 }
+.cred-toggle {
+  background: none;
+  border: none;
+  color: var(--bronze);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 16px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+.cred-toggle:hover {
+  opacity: 0.8;
+}
+.cred-toggle::before {
+  content: '▼';
+  display: inline-block;
+  transition: transform 0.3s ease;
+  font-size: 12px;
+}
+.cred-toggle.collapsed::before {
+  transform: rotate(-90deg);
+}
+.cred-container {
+  max-height: 500px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.cred-container.collapsed {
+  max-height: 0;
+}
 
 /* ─── CTA / CONTACT ───────────────────────────── */
 .cta-section {
@@ -492,18 +526,21 @@ footer {
         </div>
       </div>
       <div>
-        <ul class="cred-list">
-          <li>M.A. Organizational Leadership, Lewis University</li>
-          <li>PMP® #2806177 | CSM | CSPO</li>
-          <li>Agile Hybrid + GenAI Micro-Credentials</li>
-          <li>NRA Instructor — 5 Disciplines (#183270750)</li>
-          <li>ISP Concealed Carry Instructor (CCT20H899)</li>
-          <li>NIH Certified Ethical Researcher</li>
-          <li>Chief Resident Advocate, IDVA (Current)</li>
-          <li>Adjunct Professor, Roosevelt University</li>
-          <li>8 Peer-Reviewed Papers Under Review</li>
-          <li>SDVOSB Certified | SAM.gov Registered</li>
-        </ul>
+        <button class="cred-toggle" id="credToggle">View Credentials</button>
+        <div class="cred-container collapsed" id="credContainer">
+          <ul class="cred-list">
+            <li>M.A. Organizational Leadership, Lewis University</li>
+            <li>PMP® #2806177 | CSM | CSPO</li>
+            <li>Agile Hybrid + GenAI Micro-Credentials</li>
+            <li>NRA Instructor — 5 Disciplines (#183270750)</li>
+            <li>ISP Concealed Carry Instructor (CCT20H899)</li>
+            <li>NIH Certified Ethical Researcher</li>
+            <li>Chief Resident Advocate, IDVA (Current)</li>
+            <li>Adjunct Professor, Roosevelt University</li>
+            <li>8 Peer-Reviewed Papers Under Review</li>
+            <li>SDVOSB Certified | SAM.gov Registered</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
@@ -553,5 +590,26 @@ footer {
     </div>
   </div>
 </footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const credToggle = document.getElementById('credToggle');
+  const credContainer = document.getElementById('credContainer');
+
+  if (credToggle && credContainer) {
+    credToggle.addEventListener('click', function() {
+      credContainer.classList.toggle('collapsed');
+      credToggle.classList.toggle('collapsed');
+
+      // Update button text
+      if (credContainer.classList.contains('collapsed')) {
+        credToggle.textContent = 'View Credentials';
+      } else {
+        credToggle.textContent = 'Hide Credentials';
+      }
+    });
+  }
+});
+</script>
 
 </html>

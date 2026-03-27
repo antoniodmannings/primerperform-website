@@ -597,6 +597,10 @@ document.addEventListener('DOMContentLoaded', function() {
   const credContainer = document.getElementById('credContainer');
 
   if (credToggle && credContainer) {
+    // Initialize text based on collapsed state
+    const isCollapsed = credContainer.classList.contains('collapsed');
+    credToggle.textContent = isCollapsed ? 'View Credentials' : 'Hide Credentials';
+
     credToggle.addEventListener('click', function() {
       credContainer.classList.toggle('collapsed');
       credToggle.classList.toggle('collapsed');

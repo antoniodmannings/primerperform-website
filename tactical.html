@@ -407,6 +407,58 @@ footer {
 .tac-hero-sub { animation: fadeUp 0.6s ease both 0.6s; }
 .tac-hero-text { animation: fadeUp 0.6s ease both 0.8s; }
 .tac-creds { animation: fadeUp 0.6s ease both 1.0s; }
+
+/* ─── STRIPE PAYMENT BUTTONS ──────────────── */
+.price-cta {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.btn-register {
+  display: block;
+  text-align: center;
+  padding: 13px 20px;
+  background: var(--bronze);
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: background 0.3s, transform 0.2s;
+  border: none;
+  cursor: pointer;
+}
+.btn-register:hover {
+  background: #B8975E;
+  transform: translateY(-1px);
+}
+.btn-register-secondary {
+  display: block;
+  text-align: center;
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--bronze);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: 1px solid rgba(160,132,92,0.5);
+  transition: all 0.3s;
+}
+.btn-register-secondary:hover {
+  border-color: var(--bronze);
+  background: rgba(160,132,92,0.08);
+}
+.stripe-note {
+  font-size: 11px;
+  color: #8899AA;
+  text-align: center;
+  margin-top: 6px;
+  letter-spacing: 0.5px;
+}
 </style>
 </head>
 <body>
@@ -587,10 +639,10 @@ footer {
     <h2>Ready to Get Certified?</h2>
     <p>Schedule your private mobile CCL training. We come to you with everything you need — firearm, ammunition, protection, curriculum, and certification.</p>
     <div class="cta-buttons">
-      <a href="mailto:info@primerperform.com" class="btn-primary">Email to Schedule →</a>
-      <a href="tel:3128602360" class="btn-secondary">Call (312) 860-2360</a>
+      <a href="https://buy.stripe.com/8x2eV67HdfdXc7rd2TfjG01" class="btn-primary" target="_blank" rel="noopener noreferrer">Register Now →</a>
+      <a href="tel:3124045085" class="btn-secondary">Call (312) 404-5085</a>
     </div>
-    <p style="font-size:13px; color:#556677; margin-top:24px;">Scheduling & Student Inquiries: (312) 860-2360 &nbsp;|&nbsp; General: (312) 404-5085</p>
+    <p style="font-size:13px; color:#556677; margin-top:24px;">Secure payment via Stripe. Group bookings &amp; custom scheduling: <a href="mailto:info@primerperform.com" style="color:var(--bronze); text-decoration:none;">info@primerperform.com</a></p>
   </div>
 </section>
 
@@ -598,11 +650,32 @@ footer {
 <footer>
   <div class="container">
     <div class="footer-contact">
-      <a href="mailto:info@primerperform.com">info@primerperform.com</a>
+      <p style="font-size: 14px; color: #AABBCC; margin-bottom: 12px;">
+        <a href="mailto:info@primerperform.com" style="color: var(--bronze); text-decoration: none;">info@primerperform.com</a>
+      </p>
+      <p style="font-size: 12px; color: #8899AA; margin-bottom: 8px;">
+        <a href="tel:3124045085" style="color: var(--bronze); text-decoration: none;">(312) 404-5085</a>
+      </p>
+      <p style="font-size: 11px; color: #556677; margin-bottom: 16px;">
+        36 N Cass Ave Suite #2031, Westmont, IL 60559
+      </p>
     </div>
-    <div class="footer-links">
-      <a href="index.html#services">All Services</a>
-      <a href="index.html#methodology">Methodology</a>
-      <a href="index.html#about">About</a>
+    <div class="footer-links" style="margin-bottom: 20px;">
+      <a href="index.html#services" style="margin: 0 12px; font-size: 12px; color: #8899AA; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px;">All Services</a>
+      <a href="index.html#methodology" style="margin: 0 12px; font-size: 12px; color: #8899AA; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px;">Methodology</a>
+      <a href="index.html#about" style="margin: 0 12px; font-size: 12px; color: #8899AA; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px;">About</a>
+      <a href="index.html" style="margin: 0 12px; font-size: 12px; color: #8899AA; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px;">Privacy</a>
+      <a href="index.html" style="margin: 0 12px; font-size: 12px; color: #8899AA; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px;">Terms</a>
+      <a href="index.html" style="margin: 0 12px; font-size: 12px; color: #8899AA; text-decoration: none; text-transform: uppercase; letter-spacing: 0.5px;">Disclaimer</a>
     </div>
-    <p class="footer-entity">Primer Training and Consulting LLC | Service-Dis
+    <div class="footer-entity">
+      © 2026 Antonio Devan Mannings
+    </div>
+    <div class="footer-copy">
+      SDVOSB Certified | SAM.gov Registered | All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

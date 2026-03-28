@@ -1,6 +1,3 @@
+# Pre-launch. Remove Disallow line before July 2026 public launch.
 User-agent: *
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-
-Sitemap: https://primerperform.com/sitemap.xml
+Disallow: /

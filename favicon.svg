@@ -1,4 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" fill="#1C2938"/>
-  <text x="32" y="45" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#A0845C" text-anchor="middle">P</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Shield shape -->
+  <path d="M16 2 L28 7 L28 15 C28 22 22 28 16 30 C10 28 4 22 4 15 L4 7 Z" fill="#3B5068" stroke="none"/>
+  <!-- Compass needle -->
+  <path d="M16 8 L18.5 16 L16 24 L13.5 16 Z" fill="#FFFFFF" opacity="0.95"/>
+  <!-- Compass center dot -->
+  <circle cx="16" cy="16" r="2" fill="#A0845C"/>
+  <!-- Compass horizontal tick marks -->
+  <rect x="8" y="15.25" width="4" height="1.5" rx="0.5" fill="#FFFFFF" opacity="0.4"/>
+  <rect x="20" y="15.25" width="4" height="1.5" rx="0.5" fill="#FFFFFF" opacity="0.4"/>
 </svg>

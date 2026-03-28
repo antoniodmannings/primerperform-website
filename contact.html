@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Primer Performance</title>
+  <meta name="description" content="Get in touch with Primer Performance. Start a conversation about leadership development, consulting, workshops, or tactical training.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --slate: #3B5068;
+      --bronze: #A0845C;
+      --graphite: #4A4A4A;
+      --navy: #2C3E50;
+      --field: #F2F5F7;
+      --dark: #1C2938;
+      --white: #FFFFFF;
+      --bronze-light: rgba(160, 132, 92, 0.12);
+      --shadow: 0 4px 24px rgba(0,0,0,0.08);
+      --shadow-lg: 0 8px 40px rgba(0,0,0,0.12);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Barlow', sans-serif;
+      color: var(--graphite);
+      line-height: 1.6;
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+    .page-header {
+      background: var(--dark);
+      padding: 0;
+      position: relative;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--bronze) 0%, var(--slate) 100%);
+    }
+    .page-header-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 32px 24px;
+      text-align: center;
+    }
+    .page-header h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: clamp(36px, 6vw, 56px);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+      margin-bottom: 8px;
+    }
+    .page-header h1 a {
+      color: var(--white);
+      text-decoration: none;
+    }
+    .page-header h1 a span { color: var(--bronze); }
+    .page-header h1 a:hover { opacity: 0.9; }
+    .page-header-tagline {
+      font-size: 16px;
+      color: var(--bronze);
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .contact-section {
+      padding: 64px 0 80px;
+      background: var(--field);
+    }
+    .contact-intro {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+    .contact-intro h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 12px;
+    }
+    .contact-intro p {
+      font-size: 16px;
+      color: var(--graphite);
+      line-height: 1.7;
+    }
+
+    .form-card {
+      background: var(--white);
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 40px 36px;
+      box-shadow: var(--shadow);
+      border-top: 3px solid var(--bronze);
+    }
+    .form-group {
+      margin-bottom: 24px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--slate);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .form-group label .required {
+      color: var(--bronze);
+      margin-left: 2px;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px 16px;
+      font-family: 'Barlow', sans-serif;
+      font-size: 15px;
+      color: var(--graphite);
+      background: var(--field);
+      border: 1px solid #D0D8E0;
+      border-radius: 2px;
+      transition: border-color 0.3s, box-shadow 0.3s;
+      outline: none;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--bronze);
+      box-shadow: 0 0 0 3px rgba(160, 132, 92, 0.15);
+    }
+    .form-group textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    .form-group select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%233B5068' stroke-width='2' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 16px center;
+      padding-right: 40px;
+    }
+
+    .btn-submit {
+      display: inline-block;
+      padding: 14px 40px;
+      background: var(--slate);
+      color: var(--white);
+      font-family: 'Barlow', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.3s;
+      width: 100%;
+    }
+    .btn-submit:hover {
+      background: var(--bronze);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 40px 24px;
+    }
+    .form-success.visible {
+      display: block;
+    }
+    .form-success-icon {
+      width: 56px; height: 56px;
+      background: rgba(160, 132, 92, 0.12);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .form-success-icon svg {
+      width: 28px; height: 28px;
+      stroke: var(--bronze);
+      fill: none;
+    }
+    .form-success h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--slate);
+      margin-bottom: 8px;
+    }
+    .form-success p {
+      font-size: 15px;
+      color: var(--graphite);
+      line-height: 1.7;
+    }
+
+    .contact-info {
+      text-align: center;
+      padding: 40px 24px;
+      background: var(--white);
+    }
+    .contact-info-items {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 32px;
+    }
+    .contact-info-item a {
+      color: var(--bronze);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 15px;
+      transition: opacity 0.3s;
+    }
+    .contact-info-item a:hover { opacity: 0.8; }
+    .contact-info-item .label {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--slate);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .contact-info-address {
+      margin-top: 16px;
+      font-size: 13px;
+      color: #889;
+    }
+
+    footer {
+      background: #0F1923;
+      padding: 48px 0 24px;
+      text-align: center;
+    }
+    .footer-contact { margin-bottom: 24px; }
+    .footer-contact a {
+      color: var(--bronze);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .footer-contact a:hover { text-decoration: underline; }
+    .footer-links {
+      display: flex; justify-content: center; gap: 24px;
+      margin-bottom: 24px;
+    }
+    .footer-links a {
+      font-size: 12px; color: #667788;
+      text-decoration: none;
+      letter-spacing: 1px; text-transform: uppercase;
+    }
+    .footer-links a:hover { color: var(--bronze); }
+    .footer-entity {
+      font-size: 12px; color: #556677;
+      margin-bottom: 4px;
+    }
+    .footer-copy {
+      font-size: 11px; color: #3A4A5A;
+    }
+
+    @media (max-width: 768px) {
+      .form-card { padding: 28px 20px; }
+      .contact-info-items { flex-direction: column; gap: 20px; }
+      .footer-links { flex-wrap: wrap; gap: 16px; }
+    }
+    @media (max-width: 375px) {
+      .page-header-content { padding: 24px 16px; }
+      .contact-section { padding: 40px 0 56px; }
+      .form-card { padding: 24px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="page-header">
+    <div class="page-header-content">
+      <h1><a href="/">PRIMER<span>PERFORMANCE</span></a></h1>
+      <p class="page-header-tagline">Integration Over Isolation&trade;</p>
+    </div>
+  </header>
+
+  <!-- CONTACT FORM SECTION -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="contact-intro">
+        <h2>Start a Conversation</h2>
+        <p>Whether you're exploring leadership development for your team, planning a workshop, or have a question about our services, we'd like to hear from you.</p>
+      </div>
+
+      <div class="form-card">
+        <!-- Netlify Form -->
+        <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+          <input type="hidden" name="form-name" value="contact">
+          <!-- Honeypot spam prevention -->
+          <p style="display:none">
+            <label>Don't fill this out: <input name="bot-field"></label>
+          </p>
+
+          <div class="form-group">
+            <label for="name">Full Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="Your full name">
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="your@email.com">
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone</label>
+            <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555">
+          </div>
+
+          <div class="form-group">
+            <label for="service">Service Interest <span class="required">*</span></label>
+            <select id="service" name="service" required>
+              <option value="" disabled selected>Select a service area</option>
+              <option value="Consulting">Consulting</option>
+              <option value="Workshops">Workshops</option>
+              <option value="Tactical Training">Tactical Training</option>
+              <option value="Immersive Programs">Immersive Programs</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" required placeholder="Tell us about your goals or how we can help..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-submit">Send Message</button>
+        </form>
+
+        <!-- Success confirmation (inline, no redirect) -->
+        <div class="form-success" id="form-success">
+          <div class="form-success-icon">
+            <svg viewBox="0 0 24 24" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          </div>
+          <h3>Message Received</h3>
+          <p>Thank you for reaching out. Antonio will follow up within one business day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT INFO BAR -->
+  <section class="contact-info">
+    <div class="contact-info-items">
+      <div class="contact-info-item">
+        <span class="label">Email</span>
+        <a href="mailto:info@primerperform.com">info@primerperform.com</a>
+      </div>
+      <div class="contact-info-item">
+        <span class="label">Phone</span>
+        <a href="tel:3124045085">(312) 404-5085</a>
+      </div>
+    </div>
+    <p class="contact-info-address">36 N Cass Ave Suite #2031, Westmont, IL 60559</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-contact">
+        <a href="mailto:info@primerperform.com">info@primerperform.com</a>
+        &nbsp;&nbsp;|&nbsp;&nbsp;
+        <a href="tel:3124045085">(312) 404-5085</a>
+      </div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/consulting">Consulting</a>
+        <a href="/workshops">Workshops</a>
+        <a href="/tactical">Tactical</a>
+        <a href="/immersive">Immersive</a>
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+      </div>
+      <p class="footer-entity">Primer Training and Consulting LLC | d/b/a Primer Performance | IL SOS #09159819</p>
+      <p class="footer-copy">Integration Over Isolation&trade; | &copy; 2026 Antonio Devan Mannings. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Inline success message - no redirect
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = this;
+      var formData = new FormData(form);
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams(formData).toString()
+      }).then(function(response) {
+        if (response.ok) {
+          form.style.display = 'none';
+          document.getElementById('form-success').classList.add('visible');
+        } else {
+          alert('There was an issue submitting your message. Please try again or email us directly.');
+        }
+      }).catch(function() {
+        alert('There was an issue submitting your message. Please try again or email us directly.');
+      });
+    });
+  </script>
+
+</body>
+</html>

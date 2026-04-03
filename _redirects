@@ -1,0 +1,16 @@
+# Netlify redirect rules for Primer Performance
+# Handles slash-style URLs that lack .html extension
+
+/consulting    /consulting.html    200
+/workshops     /workshops.html     200
+/tactical      /tactical.html      200
+/immersive     /immersive.html     200
+/privacy       /privacy.html       200
+/terms         /terms.html         200
+/ethics        /ethics.html        200
+/contact       /contact.html       200
+/accessibility /accessibility.html 200
+/disclaimer    /disclaimer.html    200
+
+# Ensure root resolves
+/index         /index.html         200

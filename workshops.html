@@ -319,13 +319,34 @@ footer { background: #0F1923; padding: 48px 0 24px; text-align: center; }
   </div>
 </section>
 
-<!-- ═══ CTA ═══ -->
+<!-- ═══ CTA — WORKSHOP REQUEST FORM ═══ -->
 <section class="cta-section" id="contact">
   <div class="container">
     <h2>Ready to Develop Your Team?</h2>
     <p>Tell us about your team, your objectives, and your timeline. We will recommend the right modules and format for your organization.</p>
-    <div class="cta-buttons">
-      <a href="contact.html" class="btn-primary">Request a Workshop →</a>
+    <form name="workshop-request" data-netlify="true" netlify-honeypot="bot-field" style="max-width: 560px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; text-align: left;">
+      <input type="hidden" name="form-name" value="workshop-request">
+      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <input type="text" name="name" placeholder="Your Name" required style="padding: 12px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white);">
+      <input type="email" name="email" placeholder="Email Address" required style="padding: 12px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white);">
+      <input type="tel" name="phone" placeholder="Phone (Optional)" style="padding: 12px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white);">
+      <input type="text" name="organization" placeholder="Organization" required style="padding: 12px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white);">
+      <input type="number" name="group-size" placeholder="Estimated Group Size" min="1" style="padding: 12px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white);">
+      <select name="format" required style="padding: 12px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white);">
+        <option value="" style="color: #333;">Preferred Format</option>
+        <option value="half-day" style="color: #333;">Half-Day (3–4 hours)</option>
+        <option value="full-day" style="color: #333;">Full-Day (6–8 hours)</option>
+        <option value="multi-day" style="color: #333;">Multi-Day Series</option>
+        <option value="virtual" style="color: #333;">Virtual / Remote</option>
+        <option value="flexible" style="color: #333;">Flexible / Not Sure</option>
+      </select>
+      <textarea name="topics" placeholder="Topics of Interest (e.g., team cohesion, leadership under pressure, communication)" rows="3" style="padding: 12px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white); resize: vertical;"></textarea>
+      <input type="text" name="preferred-dates" placeholder="Preferred Date(s) or Timeframe" style="padding: 12px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white);">
+      <textarea name="details" placeholder="Anything else we should know?" rows="3" style="padding: 12px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white); resize: vertical;"></textarea>
+      <button type="submit" class="btn-primary" style="align-self: flex-start;">Submit Workshop Request →</button>
+    </form>
+    <div style="text-align: center; margin-top: 24px;">
+      <p style="font-size: 14px; color: #8899AA; margin-bottom: 12px;">Prefer to call?</p>
       <a href="tel:3124045085" class="btn-secondary">Call (312) 404-5085</a>
     </div>
   </div>

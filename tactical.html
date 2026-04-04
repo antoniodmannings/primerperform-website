@@ -594,7 +594,7 @@ footer {
     <p class="section-subtitle" style="color:#8899AA; margin-bottom:48px;">From first contact to ISP application — we manage the entire process.</p>
     <div class="process-grid">
       <div class="process-step">
-        <p>Complete the online pre-class needs assessment</p>
+        <p>Complete the <a href="https://docs.google.com/forms/d/e/1FAIpQLSfUxcElq1lHt3J4CUsDseoWvT0YQbDWg2tY2h-ioHwC08PIrw/viewform" target="_blank" rel="noopener noreferrer" style="color: var(--bronze); text-decoration: underline;">online pre-class needs assessment</a></p>
       </div>
       <div class="process-step">
         <p>We confirm your date, location, and course selection</p>
@@ -633,6 +633,34 @@ footer {
   </div>
 </section>
 
+<!-- ═══ GROUP REGISTRATION ═══ -->
+<section class="section section-field" id="group-registration">
+  <div class="container">
+    <p class="section-label">Group Enrollment</p>
+    <h2 class="section-title">Register a Group</h2>
+    <p class="section-subtitle">Enrolling 2 or more students? Submit your group details below. Volume pricing applies automatically: 2–5 students $599/ea, 6+ students $499/ea.</p>
+    <form name="group-registration" data-netlify="true" netlify-honeypot="bot-field" style="max-width: 640px; display: flex; flex-direction: column; gap: 16px;">
+      <input type="hidden" name="form-name" value="group-registration">
+      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
+      <input type="text" name="organizer-name" placeholder="Organizer Full Name" required style="padding: 12px 16px; border: 1px solid #D0D7DE; border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px;">
+      <input type="email" name="organizer-email" placeholder="Organizer Email" required style="padding: 12px 16px; border: 1px solid #D0D7DE; border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px;">
+      <input type="tel" name="organizer-phone" placeholder="Organizer Phone" style="padding: 12px 16px; border: 1px solid #D0D7DE; border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px;">
+      <input type="text" name="organization" placeholder="Organization / Agency (Optional)" style="padding: 12px 16px; border: 1px solid #D0D7DE; border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px;">
+      <select name="course" required style="padding: 12px 16px; border: 1px solid #D0D7DE; border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: #4A4A4A;">
+        <option value="">Select Course</option>
+        <option value="16hr-ccl">16-Hour CCL (Illinois Concealed Carry)</option>
+        <option value="8hr-renewal">8-Hour CCL Renewal</option>
+        <option value="tactical-practicum">Tactical Leadership Practicum</option>
+      </select>
+      <input type="number" name="student-count" placeholder="Number of Students" min="2" max="20" required style="padding: 12px 16px; border: 1px solid #D0D7DE; border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px;">
+      <textarea name="student-roster" placeholder="Student Names (one per line)" rows="4" style="padding: 12px 16px; border: 1px solid #D0D7DE; border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; resize: vertical;"></textarea>
+      <input type="text" name="preferred-dates" placeholder="Preferred Date(s)" style="padding: 12px 16px; border: 1px solid #D0D7DE; border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px;">
+      <textarea name="notes" placeholder="Additional Notes (Optional)" rows="3" style="padding: 12px 16px; border: 1px solid #D0D7DE; border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; resize: vertical;"></textarea>
+      <button type="submit" class="btn-primary" style="align-self: flex-start;">Submit Group Registration →</button>
+    </form>
+  </div>
+</section>
+
 <!-- ═══ CTA ═══ -->
 <section class="cta-section" id="contact">
   <div class="container">
@@ -640,6 +668,7 @@ footer {
     <p>Schedule your private mobile CCL training. We come to you with everything you need — firearm, ammunition, protection, curriculum, and certification.</p>
     <div class="cta-buttons">
       <a href="https://buy.stripe.com/8x2eV67HdfdXc7rd2TfjG01" class="btn-primary" target="_blank" rel="noopener noreferrer">Register Now →</a>
+      <a href="#group-registration" class="btn-secondary">Register a Group →</a>
       <a href="tel:3124045085" class="btn-secondary">Call (312) 404-5085</a>
     </div>
     <p style="font-size:13px; color:#556677; margin-top:24px;">Secure payment via Stripe. Group bookings &amp; custom scheduling: <a href="mailto:info@primerperform.com" style="color:var(--bronze); text-decoration:none;">info@primerperform.com</a></p>

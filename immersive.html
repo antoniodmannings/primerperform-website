@@ -223,7 +223,9 @@ footer { background: #0F1923; padding: 48px 0 24px; text-align: center; }
   <div class="container">
     <h2>Join the Priority List</h2>
     <p>Immersive programs are in development. Register your interest now and be the first to know when enrollment opens.</p>
-    <form id="interest-form" style="max-width: 480px; margin: 0 auto 24px; display: flex; flex-direction: column; gap: 16px;">
+    <form id="interest-form" name="immersive-interest" data-netlify="true" netlify-honeypot="bot-field" style="max-width: 480px; margin: 0 auto 24px; display: flex; flex-direction: column; gap: 16px;">
+      <input type="hidden" name="form-name" value="immersive-interest">
+      <p style="display:none;"><label>Don't fill this out: <input name="bot-field"></label></p>
       <input type="text" name="name" placeholder="Full Name" required style="padding: 12px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white); transition: all 0.3s;">
       <input type="email" name="email" placeholder="Email Address" required style="padding: 12px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white); transition: all 0.3s;">
       <input type="tel" name="phone" placeholder="Phone (Optional)" style="padding: 12px 16px; background: rgba(255,255,255,0.1); border: 1px solid rgba(160,132,92,0.4); border-radius: 2px; font-family: 'Barlow', sans-serif; font-size: 14px; color: var(--white); transition: all 0.3s;">
@@ -248,11 +250,16 @@ footer { background: #0F1923; padding: 48px 0 24px; text-align: center; }
 <script>
 document.getElementById('interest-form').addEventListener('submit', function(e) {
   e.preventDefault();
-  const formData = new FormData(this);
-  const data = Object.fromEntries(formData);
-
-  // Direct mailto — form backend to be configured
-  window.location.href = 'mailto:info@primerperform.com?subject=Immersive%20Programs%20%E2%80%94%20Priority%20List&body=Name:%20' + encodeURIComponent(data.name) + '%0AEmail:%20' + encodeURIComponent(data.email) + '%0APhone:%20' + encodeURIComponent(data.phone || 'N/A') + '%0AOrganization:%20' + encodeURIComponent(data.organization || 'N/A') + '%0APreferred%20Duration:%20' + encodeURIComponent(data.duration);
+  const form = e.target;
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(new FormData(form)).toString()
+  }).then(function() {
+    form.innerHTML = '<p style="color: var(--bronze); font-size: 18px; font-weight: 600; padding: 24px 0;">Thank you! You\'re on the priority list. We\'ll notify you when enrollment opens.</p>';
+  }).catch(function() {
+    form.innerHTML = '<p style="color: var(--bronze); font-size: 18px; padding: 24px 0;">Something went wrong. Please call (312) 404-5085 or email info@primerperform.com.</p>';
+  });
 });
 </script>
 
